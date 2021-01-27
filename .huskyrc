@@ -1,0 +1,8 @@
+{
+  "hooks": {
+    "pre-commit": "pretty-quick --staged",
+    "pre-push": "npm test",
+    "post-merge": "npm install",
+    "post-checkout": "npm install"
+  }
+}
