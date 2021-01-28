@@ -8,7 +8,7 @@
     "start": "ts-node src/server.ts",
     "dev": "ts-node-dev --respawn src/server.ts",
     "build": "tsc",
-    "test": "jest --forceExit --detectOpenHandles",
+    "test": "tsc --noEmit && npm run lint",
     "lint": "eslint --ignore-path .gitignore --ext .ts src/",
     "lint:fix": "npm run lint -- --fix",
     "pretty-quick": "pretty-quick"
