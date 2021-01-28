@@ -1,0 +1,70 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "express-playground API",
+    "description": "API to play with express",
+    "contact": {
+      "name": "Leonardo Montenegro",
+      "email": "leonardomontenegro123@gmail.com"
+    }
+  },
+  "host": "localhost:8080",
+  "basePath": "/",
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/endpoint-1": {
+      "post": {
+        "parameters": [
+          {
+            "required": true,
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/RequestText"
+            }
+          }
+        ],
+        "description": "First test endpoint",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseText"
+            }
+          },
+          "500": {
+            "description": "Something went wrong"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "RequestText": {
+      "required": ["data", "otherProp", "enumProp"],
+      "properties": {
+        "data": {
+          "type": "string"
+        },
+        "otherProp": {
+          "type": "string"
+        },
+        "env": {
+          "type": "string",
+          "enum": ["dev", "production"]
+        }
+      }
+    },
+    "ResponseText": {
+      "properties": {
+        "result": {
+          "type": "string",
+          "description": "Processed text"
+        }
+      }
+    }
+  }
+}
