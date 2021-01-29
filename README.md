@@ -6,8 +6,8 @@ http://localhost:8080/api-docs/
 
 DOING:
 
-2. Integration tests (with mocks)
-3. Automate with envs
+21. Integration tests (with mocks)
+22. Automate with envs
 
 TODO:
 
@@ -21,6 +21,7 @@ DONE:
 1. Unit tests
 2. Redis playgrounds
 3. Docker runner
+4. Integration tests
 
 System requirements:
 
