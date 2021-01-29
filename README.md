@@ -6,15 +6,12 @@ http://localhost:8080/api-docs/
 
 DOING:
 
-21. Integration tests (with mocks)
-22. Automate with envs
+6. Bitbucket pipelines
 
 TODO:
 
-6. Bitbucket pipelines
 7. Document
-
-8. Integration tests
+8. Automate with envs
 
 DONE:
 
@@ -22,6 +19,7 @@ DONE:
 2. Redis playgrounds
 3. Docker runner
 4. Integration tests
+5. Integration tests (with mocks)
 
 System requirements:
 

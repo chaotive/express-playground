@@ -5,12 +5,10 @@ import Redis from 'ioredis'
 import { Environments, IRequestBody1, IResponseBody1 } from './typings'
 import { getNumberAndAdd1 } from './helpers'
 
-const App = () => {
+const App = (redis = new Redis()) => {
   const app = express()
   app.use(express.json())
   app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
-
-  const redis = new Redis()
 
   app.post<any, IResponseBody1, IRequestBody1>('/endpoint-1', async (req, res) => {
     try {

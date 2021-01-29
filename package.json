@@ -8,7 +8,7 @@
     "start": "ts-node src/server.ts",
     "dev": "ts-node-dev --respawn src/server.ts",
     "build": "tsc",
-    "test": "jest --forceExit --detectOpenHandles",
+    "test": "npm run lint && jest --forceExit --detectOpenHandles",
     "lint": "eslint --ignore-path .gitignore --ext .ts src/",
     "lint:fix": "npm run lint -- --fix",
     "pretty-quick": "pretty-quick"
@@ -38,6 +38,7 @@
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
     "husky": "^4.3.8",
+    "ioredis-mock": "^5.2.0",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
     "supertest": "^6.1.3",
